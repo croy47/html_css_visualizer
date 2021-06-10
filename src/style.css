@@ -1,0 +1,39 @@
+textarea {
+  width: 80vw;
+  height: 10vh;
+  padding: 20px;
+}
+#visualization {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#visualization textarea {
+  width: 47vw;
+  height: 90vh;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+#visualization #code-output {
+  /* width: 47vw;
+  height: 90vh; */
+  padding: 20px;
+  border: 1px solid red;
+  overflow: scroll;
+}
+
+#visualization #code-output body {
+  width: 47vw;
+  height: 90vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+#visualization #code-output * {
+  max-width: 47vw;
+  max-height: 90vh;
+}
