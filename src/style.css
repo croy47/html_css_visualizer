@@ -1,39 +1,152 @@
-textarea {
-  width: 80vw;
-  height: 10vh;
-  padding: 20px;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+}
+
+.app {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+#userinput-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+#userinput {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-content: flex-start;
+  text-align: none;
+}
+
+.textarea {
+  margin-top: 1vh;
+  width: 40vw;
+  height: 47vh;
+  padding: 20px;
+  resize: none;
+  font-size: 1.2rem;
+}
+
+/*  */
 #visualization {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-#visualization textarea {
-  width: 47vw;
-  height: 90vh;
-  font-size: 20px;
-  background-color: black;
+#code-container {
+  width: 32vw;
+  height: 80vh;
+  font-size: 18px;
+  background-color: rgb(14, 13, 13);
   color: white;
-  font-weight: 600;
-  padding: 20px;
+  font-weight: 400;
+  padding: 10px;
   overflow-x: hidden;
+  resize: none;
 }
 
-#visualization #code-output {
-  /* width: 47vw;
-  height: 90vh; */
-  padding: 20px;
-  border: 1px solid red;
-  overflow: scroll;
+#iframe-container {
+  width: 68vw;
+  height: 99vh;
 }
 
-#visualization #code-output body {
-  width: 47vw;
-  height: 90vh;
-  overflow: scroll;
-  overflow-x: hidden;
+#visualization iframe {
+  min-width: 68vw;
+  min-height: 99vh;
 }
-#visualization #code-output * {
-  max-width: 47vw;
-  max-height: 90vh;
+
+#submit-btn {
+  color: white;
+  font-weight: 700;
+  justify-self: baseline;
+}
+
+#submit-btn:hover {
+  color: brown;
+  background-color: white;
+}
+
+#visualization-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  min-width: 70px;
+  background-color: rgb(85, 85, 99);
+  font-size: 1rem;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+#visualization-pause:hover {
+  background-color: white;
+}
+
+#visualization-controls div {
+  margin-right: 10px;
+  background-color: rgb(85, 85, 99);
+  border-radius: 10px;
+
+  color: white;
+}
+
+#visualization-controls div button {
+  font-size: 1rem;
+}
+
+#visualization-controls div button:hover {
+  color: red;
+  background-color: transparent;
+  border: none;
+}
+
+.speed-btn:hover {
+  background-color: white;
+  color: rgb(85, 85, 99);
+  border: 1px solid black;
+}
+
+#visualization-pause {
+  color: #0074d9;
+  padding: 5px;
+  align-items: center;
+  background-color: transparent;
+}
+
+.contact {
+  margin-top: 5px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 12px;
+}
+
+.contact a {
+  font-size: 30px;
+  margin-left: 20px;
+  text-decoration: underline;
+}
+
+.contact a:hover {
+  color: blue;
 }

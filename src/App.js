@@ -6,10 +6,15 @@ import Visualization from "./Visualization";
 export default function App() {
   const { isVisualizationOn } = useGlobalContext();
 
-  if (!isVisualizationOn) return <UserInput />;
+  if (!isVisualizationOn)
+    return (
+      <div className="app">
+        <UserInput />
+      </div>
+    );
 
   return (
-    <div className="App">
+    <div className="app">
       {/* <UserInput /> */}
       <Visualization />
     </div>
